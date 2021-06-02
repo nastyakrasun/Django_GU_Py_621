@@ -1,9 +1,18 @@
 from django.shortcuts import render
+from mainapp.models import Product
 
+def index(request, pk=None):
+    if pk:
+        print(f'PK -- {pk}')
 
-def index(request):
-    list_params = ['a1', 'a2', 'a3']
-    context = {'dict_params': list_params, 'some_name': 'hELLO'}
+    title = 'geekshop'
+    products = Product.objects.all()[:4]
+
+    context = {
+        'products': products,
+        'some_name': 'hELLO',
+        'title': title,
+    }
     return render(request, 'geekshop/index.html', context=context)
 
 
