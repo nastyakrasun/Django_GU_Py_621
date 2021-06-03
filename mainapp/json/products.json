@@ -1,0 +1,46 @@
+[
+  {
+      "category": 1,
+      "name": "стул",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "удобный стул",
+      "description": "удобный стул",
+      "price": "0.00",
+      "quantity": 0,
+      "created": "2021-06-01T12:21:48.635Z",
+      "updated": "2021-06-01T12:21:48.644Z"
+  },
+  {
+      "category": 2,
+      "name": "стол",
+      "image": "products_images/product-4-sm.jpg",
+      "short_desc": "хороший стол",
+      "description": "хороший стол",
+      "price": "0.00",
+      "quantity": 0,
+      "created": "2021-06-01T12:21:48.635Z",
+      "updated": "2021-06-01T12:21:48.644Z"
+  },
+  {
+      "category": 1,
+      "name": "кресло",
+      "image": "products_images/product-2_gb2rplt.jpg",
+      "short_desc": "яркое кресло",
+      "description": "яркое кресло",
+      "price": "0.00",
+      "quantity": 0,
+      "created": "2021-06-02T07:49:24.589Z",
+      "updated": "2021-06-02T08:11:58.303Z"
+  },
+  {
+      "category": 2,
+      "name": "светильник",
+      "image": "products_images/product-1_GDHPRRY.jpg",
+      "short_desc": "хороший светильник",
+      "description": "хороший светильник",
+      "price": "0.00",
+      "quantity": 0,
+      "created": "2021-06-02T07:51:16.883Z",
+      "updated": "2021-06-02T08:12:51.888Z"
+  }
+]
