@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from mainapp import urls as mainapp_urls
 from authapp import urls as authapp_urls
+from basketapp import urls as basketapp_urls
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -16,7 +17,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
 
     path('products/', include(mainapp_urls, namespace='products'), name='products'),
+    path('basket/', include(basketapp_urls, namespace='basket'), name='basket'),
     path('auth/', include(authapp_urls, namespace='auth'), name='auth'),
+
 ]
 
 if settings.DEBUG:
