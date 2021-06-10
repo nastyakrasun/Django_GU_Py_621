@@ -20,6 +20,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Продукт</th>
                             <th scope="col">Количество</th>
+                            <th scope="col">Стоимость</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,6 +29,7 @@
                             <th scope="row">{{ forloop.counter }}</th>
                             <td>{{ item.product }}</td>
                             <td>{{ item.quantity }}</td>
+                            <td>{{ item.product.price }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>

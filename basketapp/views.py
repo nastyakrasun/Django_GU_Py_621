@@ -22,9 +22,9 @@ def basket_add(request, pk):
     if not basket:
         basket = Basket(user=request.user, product=product)
 
-    basket.quantity += 1
-    basket.save()
+        basket.quantity += 1
+        basket.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-def basket_remove(request):
+def basket_remove(request, pk):
     pass

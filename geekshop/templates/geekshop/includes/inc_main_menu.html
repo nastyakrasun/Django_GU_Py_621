@@ -20,7 +20,12 @@
 	<a href="#" class="search"></a>
 	<a href="{% url 'basket:basket' %}" class="basket">
 		<span>
-			{%  if basket %} {{ basket|length }} {% endif %}
+			{% if basket %}
+<!--				{% for item in basket %}-->
+<!--					{{ item.product.price }}-->
+<!--				{% endfor %}-->
+			 	{{ basket|length }}
+			{% endif %}
 		</span>
 	</a>
 </div>
