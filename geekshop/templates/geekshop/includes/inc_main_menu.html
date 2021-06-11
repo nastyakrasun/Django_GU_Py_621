@@ -18,13 +18,11 @@
 		</li>
 	</ul>
 	<a href="#" class="search"></a>
-	<a href="{% url 'basket:basket' %}" class="basket">
+	<a href="{% url 'basket:basket' %}" class="fa fa-shopping-basket basket">
 		<span>
 			{% if basket %}
-<!--				{% for item in basket %}-->
-<!--					{{ item.product.price }}-->
-<!--				{% endfor %}-->
-			 	{{ basket|length }}
+			 	{{ basket.0.total_cost|floatformat:0 }} руб
+				{{ basket.0.total_quantity }} шт
 			{% endif %}
 		</span>
 	</a>

@@ -39,3 +39,9 @@ html, body {
 .block a .text img {
     width: 80px;
 }
+
+.details-slider {
+	width: 570px;
+	float: left;
+	margin-right: 30px;
+}

@@ -4,6 +4,29 @@
 	padding: 0;
 }
 
+.block {
+    float: left;
+    margin-right: 30px;
+    display: block;
+    height: 370px;
+    width: 370px;
+    position: relative;
+}
+
+.block a .text {
+    position: absolute;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.block a img {
+    width: 80px;
+}
+
+.block a .text img {
+    width: 80px;
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -895,11 +918,7 @@ td:first-child {
 	margin-top: 98px;
 	height: 651px; 
 }
-.details-slider {
-	width: 570px;
-	float: left;
-	margin-right: 30px;
-}
+
 .slider-product {
 	width: 570px;
 	height: 570px;

@@ -6,8 +6,8 @@
 {% endblock %}
 
 {% block content %}
-{% include 'geekshop/includes/inc_main_menu.html' %}
-<div class="hero-white">
+<div class="hero">
+    {% include 'geekshop/includes/inc_main_menu.html' %}
     <h1>Корзина</h1>
 </div>
 
@@ -17,7 +17,7 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">№</th>
                             <th scope="col">Продукт</th>
                             <th scope="col">Количество</th>
                             <th scope="col">Стоимость</th>
