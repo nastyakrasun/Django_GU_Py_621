@@ -8,7 +8,10 @@ from authapp.forms import ShopUserLoginForm, ShopUserEditForm, ShopUserRegisterF
 
 def login(request):
     title = 'вход'
+
     login_form = ShopUserLoginForm(data=request.POST)
+    next = request.GET['next'] if 'next' in request.GET.keys() else ''
+
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
         password = request.POST['password']
@@ -16,12 +19,16 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
             auth.login(request, user)
+            if 'next' in request.POST.keys():
+                return HttpResponseRedirect(request.POST['next'])
+            else:
             # return HttpResponseRedirect(reverse('index'))  # для управления url, которые могут измениться в процессе
-            return HttpResponseRedirect('/')  # для возврата на главную страницу, так проще
+                return HttpResponseRedirect('/')  # для возврата на главную страницу, так проще
 
     context = {
         'title': title,
         'login_form': login_form,
+        'next': next,
     }
 
     return render(request, 'authapp/login.html', context)

@@ -1,6 +1,11 @@
 {% extends 'geekshop/base.html' %}
 {% load static %}
 
+{% block js %}
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+{% endblock %}
+
 {% block style %}
 	<link rel="stylesheet" type="text/css" href="{% static '/geekshop/style.css' %}">
 {% endblock %}
@@ -21,21 +26,17 @@
                             <th scope="col">Продукт</th>
                             <th scope="col">Количество</th>
                             <th scope="col">Стоимость</th>
+                            <th scope="col">Удалить</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {% for item in basket %}
-                        <tr>
-                            <th scope="row">{{ forloop.counter }}</th>
-                            <td>{{ item.product }}</td>
-                            <td>{{ item.quantity }}</td>
-                            <td>{{ item.product.price }}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+
+                    {% include 'basketapp/includes/inc_basket_list.html' %}
+
+
 
             </div>
+
         </div>
 {% endif %}
 {% endblock %}
