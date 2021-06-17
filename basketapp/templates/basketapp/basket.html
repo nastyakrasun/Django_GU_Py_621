@@ -3,7 +3,7 @@
 
 {% block js %}
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+<script type="text/javascript" src="{% static 'basketapp/script.js' %}"></script>
 {% endblock %}
 
 {% block style %}
@@ -15,28 +15,9 @@
     {% include 'geekshop/includes/inc_main_menu.html' %}
     <h1>Корзина</h1>
 </div>
-
     {% if user.is_authenticated %}
         <div class="container">
-            <div class="row">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">№</th>
-                            <th scope="col">Продукт</th>
-                            <th scope="col">Количество</th>
-                            <th scope="col">Стоимость</th>
-                            <th scope="col">Удалить</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    {% include 'basketapp/includes/inc_basket_list.html' %}
-
-
-
-            </div>
-
+            {% include 'basketapp/includes/inc_basket_list.html' %}
         </div>
 {% endif %}
 {% endblock %}
