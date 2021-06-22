@@ -9,6 +9,11 @@
 		<li><a href="{% url 'index' %}">домой</a></li>
 		<li><a href="{% url 'products:products' %}">продукты</a></li>
 		<li><a href="{% url 'contact' %}">контакты</a></li>
+		{% if user.is_superuser %}
+		<li>
+			<a href="{% url 'admin_staff:users' %}">Admin'ka</a>
+		</li>
+		{% endif %}
 		<li>
 			{% if user.is_authenticated %}
 				<a href="{% url 'auth:logout' %}">выйти</a>
